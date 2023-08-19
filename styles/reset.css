@@ -1,0 +1,109 @@
+
+  @media (max-width:300) {
+    .container-fluid{
+        color: red;
+    }
+    
+  }
+
+.col-lg-3 pb-3{
+    /* position: fixed; */
+    
+}
+
+
+
+h1{
+    color: white;
+    text-align: center;
+    background-color: navy;
+}
+
+#search-button{
+    color: white;
+    background-color: rgb(65, 147, 174);
+    padding-right: 118px;
+    margin-top: 10px;
+}
+
+
+
+#citName{
+    position: relative;
+    color: white;
+    background-color: rgb(65, 147, 174);
+    width: 170px;
+    text-align: center;
+    margin: 5px 0 ;
+}
+
+.weather-hr{
+    width: 170px;
+    margin-left: -1px;
+}
+
+
+
+#showCity  {
+    
+   position: relative; 
+   width: 70%;
+   background: #6C757D;
+   padding: 0px 375px 10px 20px;
+   margin: 40px 10px;
+   bottom:  140px;
+   left: 220px;
+   color: #fff;
+   font-size: 20px;
+   height: 170px;
+   border-radius: 5px;
+
+} 
+
+.list-group{
+    position: fixed;
+}
+
+
+
+#cityLI{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+#dayForecast{
+    position: relative;
+    left: 230px;
+    bottom: 170px;
+    font-size: 20px;
+}
+
+
+
+ .cards{
+    display: flex;
+    
+ }
+
+ .weatherCard{
+
+    position: relative;
+    gap: 20px;
+    color: #fff;
+    padding: 18px 16px;
+    list-style: none;
+    width: calc(100% / 5);
+    background: #6C757D;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 250px;
+    width: 100px;
+    margin: 10px;
+    left: 490px;
+
+}
+
+
+
