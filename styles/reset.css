@@ -1,109 +1,145 @@
 
-  @media (max-width:300) {
-    .container-fluid{
-        color: red;
-    }
-    
-  }
 
-.col-lg-3 pb-3{
-    /* position: fixed; */
-    
+*{
+    margin: 0;
+    padding: 0;
 }
 
+body{
+    margin:0;
+    padding: 0px;
+}
 
+/* =================== */
+
+
+/* container============= */
+.container-fluid{
+   background-color: rgb(76, 165, 169);
+    margin: 5px;
+    padding: 10px; 
+}
+
+.list-group{
+    position: fixed; 
+}
 
 h1{
-    color: white;
+    color: rgba(255, 255, 255, 0.653);
     text-align: center;
-    background-color: navy;
 }
 
 #search-button{
     color: white;
     background-color: rgb(65, 147, 174);
-    padding-right: 118px;
+    padding-right: 125px;
     margin-top: 10px;
 }
-
-
 
 #citName{
     position: relative;
     color: white;
-    background-color: rgb(65, 147, 174);
+    background-color: rgb(63, 130, 152);
     width: 170px;
     text-align: center;
     margin: 5px 0 ;
 }
 
 .weather-hr{
+    
     width: 170px;
     margin-left: -1px;
 }
 
-
-
-#showCity  {
-    
-   position: relative; 
-   width: 70%;
-   background: #6C757D;
-   padding: 0px 375px 10px 20px;
-   margin: 40px 10px;
-   bottom:  140px;
-   left: 220px;
-   color: #fff;
-   font-size: 20px;
-   height: 170px;
-   border-radius: 5px;
-
-} 
-
-.list-group{
-    position: fixed;
-}
-
-
-
-#cityLI{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-
-#dayForecast{
+/* current weather card===========================  */
+ #currentCard{
+    background-color: rgb(82, 115, 141);
     position: relative;
-    left: 230px;
-    bottom: 170px;
+    width: 75%;
+    height: 170px;
+    bottom:  60px;
+    left: 180px;
+    color: #fff;
+    border-radius: 5px;
+    list-style: none;
+    margin: 3px 3px 10px 3px;
+ }
+ 
+ #cityLI {
+    display: flex;
+    justify-content: center;
+    padding: 10px; 
+}
+
+#cDate{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+#cTemperature{
+    position: relative;
+    margin-top: 70px;
+    margin-right: 7px;
+    margin-left: -90px;
+    padding: 5px;
+}
+
+#cHumidity{
+    margin-right: 7px;
+    padding: 5px;
+    margin-top: 70px;
+}
+
+#cWindSpeed{
+    margin-right: 7px;
+    padding: 5px;
+    margin-top: 70px;
+}
+
+p{
+    margin-top: 70px;
+}
+
+h4{
+    margin-top: 10px;
+}
+
+/* next 5 days cards================ */
+#dayForecast{
+
+    position: relative;
+    margin-left: 40px ;
+    margin-bottom: 5px;
     font-size: 20px;
 }
 
-
-
- .cards{
+.cards{
     display: flex;
-    
+    justify-content: center;
  }
 
- .weatherCard{
-
-    position: relative;
-    gap: 20px;
+.weatherCard{
     color: #fff;
     padding: 18px 16px;
     list-style: none;
-    width: calc(100% / 5);
-    background: #6C757D;
+    background-color: rgb(82, 115, 141);
     border-radius: 5px;
     font-size: 13px;
     height: 250px;
-    width: 100px;
-    margin: 10px;
-    left: 490px;
-
+    margin: auto 5px;
+   align-items: center;
 }
+
+
+
+
+
+
+
+
+
+ 
 
 
 

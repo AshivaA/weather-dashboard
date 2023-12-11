@@ -1,6 +1,10 @@
 
 // current weather card
 // ================================================================================
+
+
+
+// ==============
     var currentCityDiv = $("<div>");
     currentCityDiv .attr("id","showCity");
     $("#today").append(currentCityDiv);
@@ -12,15 +16,24 @@
     var currentLI = $("<li>");
     currentLI.attr("id","cityLI");
     currentUL.append(currentLI);
-    var currentDate = $("<h3>").text("------- (--/--/----)");
+
+    var currentDate = $("<h3>").text("-------");
     currentLI.append(currentDate);
-    var currentTemperature= $("<p>").text("Temp:------°C");
+
+    var currentDate = $("<h4>").text("(--/--/----)");
+    currentLI.append(currentDate);
+    
+    var currentTemperature= $("<p>").text(" Temp:------°C ");
     currentLI.append(currentTemperature);
-    var currentHumidity = $("<p>").text("Humidity:--- %");
+    var currentHumidity = $("<p>").text(" Humidity:--- % ");
     currentLI.append(currentHumidity);
-    var currentWindSpeed = $("<p>").text("Wind:----- m/s");
+    var currentWindSpeed = $("<p>").text(" Wind:----- m/s ");
     currentLI.append(currentWindSpeed);
 // ==================================================================================
+
+
+
+
 
 // 5-Day Forecast Text
 // ================================================
@@ -127,20 +140,25 @@ function CurrentDate(weatherItem,index) {
     currentLI.append(image);
 
     var cityName = cityInput.value.trim();
-    var showCityName = $("<h2>").text(cityName);
+    var showCityName = $("<h3> ").text(cityName);
     currentLI.append(showCityName);
     console.log(showCityName);
     
-    var currentDate = $("<h3>").text( "(" + weatherItem.dt_txt.split(" ")[0]+ ")" );
+    var currentDate = $("<h4> ").text( "("+weatherItem.dt_txt.split(" ")[0]+")" );
+    currentDate.attr("id", "cDate");
     currentLI.append(currentDate);
-    
-    var currentTemperature= $("<p>").text(" Temp: " + ( weatherItem.main.temp-273.15).toFixed(2)+" °C");
+
+    var currentTemperature= $("<p>").text(" Temp:" + ( weatherItem.main.temp-273.15).toFixed(2)+"°C");
+    currentTemperature.attr("id","cTemperature");
     currentLI.append(currentTemperature);
 
-    var currentHumidity = $("<p>").text(" Humidity: "+ (weatherItem.main.humidity)+ " % ");
+    var currentHumidity = $("<p>").text(" Humidity:"+ (weatherItem.main.humidity)+ "%");
+
+    currentHumidity.attr("id","cHumidity");
     currentLI.append(currentHumidity);
 
-    var currentWindSpeed = $("<p>").text(" Wind: "+ (weatherItem.wind.speed)+ " m/s ") ;
+    var currentWindSpeed = $("<p>").text(" Wind:"+ (weatherItem.wind.speed)+ "m/s") ;
+    currentWindSpeed.attr("id","cWindSpeed");
     currentLI.append(currentWindSpeed);
 
     // // local storage the city name
