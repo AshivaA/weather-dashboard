@@ -21,4 +21,5 @@ You must only type the city name in the input box and see the result.
 ## Link to Deployed application
 [Deployment Application](https://ashivaa.github.io/weather-dashboard/)
 
-![weather-Dashboard](https://github.com/AshivaA/weather-dashboard/assets/136107176/11c941d5-0f33-4a83-8e63-4de58d952a12)
+![new-weather-dashboard](https://github.com/AshivaA/weather-dashboard/assets/136107176/c9330a39-332e-464c-b6fe-8b7966a3bb0c)
+
