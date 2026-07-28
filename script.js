@@ -17,18 +17,28 @@
     currentLI.attr("id","cityLI");
     currentUL.append(currentLI);
 
-    var currentDate = $("<h3>").text("-------");
-    currentLI.append(currentDate);
+var currentCityNameDiv = $("<div>");
+currentCityNameDiv.attr("id", "currentCityNameDiv");
+ currentLI.append(currentCityNameDiv);
 
-    var currentDate = $("<h4>").text("(--/--/----)");
-    currentLI.append(currentDate);
-    
+    var currentCity = $("<h3>").text("-------");
+    currentCityNameDiv.append(currentCity);
+
+     var currentDate = $("<h4>").text("(--/--/----)"); 
+    currentCityNameDiv .append(currentDate);
+
+
+var currentInfoDiv = $("<div>");
+currentInfoDiv.attr("id", "currentInfoDiv");
+currentLI.append(currentInfoDiv);
+
+   
     var currentTemperature= $("<p>").text(" Temp:------°C ");
-    currentLI.append(currentTemperature);
+   currentInfoDiv.append(currentTemperature);
     var currentHumidity = $("<p>").text(" Humidity:--- % ");
-    currentLI.append(currentHumidity);
+    currentInfoDiv.append(currentHumidity);
     var currentWindSpeed = $("<p>").text(" Wind:----- m/s ");
-    currentLI.append(currentWindSpeed);
+   currentInfoDiv.append(currentWindSpeed);
 // ==================================================================================
 
 
@@ -138,28 +148,36 @@ function CurrentDate(weatherItem,index) {
     image.attr("src","https://openweathermap.org/img/wn/" + weatherItem.weather[0].icon+ "@4x.png","alt","weatherImage");
     
     currentLI.append(image);
+// ------------------------------------
+    var currentCityNameDiv = $("<div>");
+currentCityNameDiv.attr("id","currentCityNameDiv");
+currentLI.append(currentCityNameDiv);
 
+var currentInfoDiv = $("<div>");
+currentInfoDiv.attr("id","currentInfoDiv");
+currentLI.append(currentInfoDiv);
+// ----------------------------------------------
     var cityName = cityInput.value.trim();
     var showCityName = $("<h3> ").text(cityName);
-    currentLI.append(showCityName);
+    currentCityNameDiv.append(showCityName);
     console.log(showCityName);
     
     var currentDate = $("<h4> ").text( "("+weatherItem.dt_txt.split(" ")[0]+")" );
     currentDate.attr("id", "cDate");
-    currentLI.append(currentDate);
+    currentCityNameDiv.append(currentDate);
 
     var currentTemperature= $("<p>").text(" Temp:" + ( weatherItem.main.temp-273.15).toFixed(2)+"°C");
     currentTemperature.attr("id","cTemperature");
-    currentLI.append(currentTemperature);
+    currentInfoDiv.append(currentTemperature);
 
     var currentHumidity = $("<p>").text(" Humidity:"+ (weatherItem.main.humidity)+ "%");
 
     currentHumidity.attr("id","cHumidity");
-    currentLI.append(currentHumidity);
+    currentInfoDiv.append(currentHumidity);
 
     var currentWindSpeed = $("<p>").text(" Wind:"+ (weatherItem.wind.speed)+ "m/s") ;
     currentWindSpeed.attr("id","cWindSpeed");
-    currentLI.append(currentWindSpeed);
+    currentInfoDiv.append(currentWindSpeed);
 
     // // local storage the city name
     // // ====================================================================
